@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rabbit, Run</title>
+    <style type="text/css">
+      * {
+        background-color: #3A3335;
+        font-family: Garamond;
+        color: #FDF0D5;
+      }
+
+      header {
+        font-size: 2em;
+      }
+
+      a {
+        color: #C6D8D3;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color:#FF3A20;
+        text-decoration: none;        
+      }
+
+      h1 {
+        color: #FF3A20;
+      }
+
+      h2 {
+        color: #92828D;
+        font-style: italic;
+        font-size: 1em;
+      } 
+
+      li {
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h1>Rabbit, Run</h1>
+      <h2>JavaScript</h2>
+      <p><img src="http://www.marythought.com/images/rabbit.jpg" width="400"></p>
+      <p>How fast and focused do you need to be to race Peter Rabbit? Follow these steps to play the game and find out!
+        <ol>
+          <li>Open the web console (shift-ctrl-i on a PC) to see the race</li>
+          <li>Follow the javascript prompts to enter your speed and focus on a scale from 1-10, along with your name (refresh if needed!).</li>
+          <li>Whoever gets to 100 first wins!</li>
+          <li>Refresh to try again. Try a different set of stats!</li>
+        </ol>
+        </p>
+    </section>
+    <footer>
+    <h3>About this page</h3>
+      <p> Hi, I'm Mary and I'm learning html and javascript with <a href="http://www.codefellows.org">Code Fellows</a>. You can read about my experience at <a href="http://www.marydickson.com">www.marydickson.com</a> and see my other projects <a href="http://www.marythought.com/">here</a>.</p>
+    </footer>
+  </body>
+
+  <script>
+    var Racer = function(s, f, n) {
+      this.speed = s;
+      this.focus = f;
+      this.name = n;
+      this.position = 0;
+      this.report = function() {
+        return this.name + " is at " + this.position;
+      };
+      this.run = function() {
+        if(this.focus >= (Math.random() * 10)) {
+          this.position += this.speed;
+        }  
+      };
+    }
+ 
+    var user = new Racer(Number(prompt("Please enter your speed 1-10", "5")),Number(prompt("Please enter your focus level 1-10", "5")),prompt("Please enter your name", "Racer"));
+    var rabbit = new Racer(8,5,"Peter Rabbit");
+    var distance = 100;
+    while(user.position < distance && rabbit.position < distance) {
+      user.run();
+      rabbit.run();
+    }
+    console.log(rabbit.report());
+    console.log(user.report());
+  </script>
+</html>
