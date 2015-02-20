@@ -1,50 +1,59 @@
-      * {
-        background-color: #3A3335;
-        font-family: Tahoma;
-        color: #FDF0D5;
-        max-width: 800px;
-        text-align: center;}
+* {
+  background-color: #3A3335;
+  font-family: Tahoma;
+  color: #FDF0D5;
+  max-width: 800px;
+  text-align: center;}
 
-      header {
-        font-size: 3em;
-        font-style: bold;
-        text-transform: uppercase;}
+header {
+  font-size: 3em;
+  font-style: bold;
+  text-transform: uppercase;}
 
-      footer {
-        /*background-color: #003000;*/ 
-        color:#92828D;
-        text-decoration: italic;}
+footer {
+  /*background-color: #003000;*/ 
+  color: #92828D;
+  text-decoration: italic;}
 
-      nav#centerDiv {
-        max-width: 800px;
-        border: 1px solid #FF3A20;}
+div#results {
+  color: #FF3A20;
+  font-weight: bold;
+}
 
-      ul, ol {
-        list-style-position: inside;}
-      
-      ul.centerUL {
-        margin: 2px auto;
-        line-height: 1.4;}
+nav#centerDiv {
+  max-width: 800px;
+  border: 1px solid #FF3A20;}
 
-      .centerUL li {
-        display: inline;
-        text-align: center;}
+ul, ol {
+  list-style-position: inside;}
 
-      a {
-        color: #C6D8D3;
-        text-decoration: none;}
+ul.centerUL {
+  margin: 2px auto;
+  line-height: 1.4;}
 
-      a:hover {
-        color:#FF3A20;
-        text-decoration: none;}
+.centerUL li {
+  display: inline;
+  text-align: center;}
 
-      h1 {
-        font-family: Garamond;
-        color: #FF3A20;}
+a {
+  color: #C6D8D3;
+  text-decoration: none;}
 
-      h2 {
-        font-family: Garamond;
-        color: #92828D;
-        font-style: italic;
-        font-size: 1em;} 
-      
+a:hover {
+  color:#FF3A20;
+  text-decoration: none;}
+
+h1 {
+  font-family: Garamond;
+  color: #FF3A20;}
+
+h2 {
+  font-family: Garamond;
+  color: #92828D;
+  font-style: italic;
+  font-size: 1em;} 
+
+button {
+  background-color: #C6D8D3;
+  color: #3A3335;
+}

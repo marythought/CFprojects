@@ -1,4 +1,4 @@
-$('#runbutton').on('click', function() {
+$('#runButton').on('click', function() {
   var userName = $('#nameInput').val();
   var userSpeed = $('#speedInput').val();
   var userFocus = $('#focusInput').val();
@@ -18,9 +18,9 @@ $('#runbutton').on('click', function() {
     };  
   }
     
-  var user = new Racer(userSpeed, userFocus, userName);
-  var rabbit = new Racer(8,5,"Peter Rabbit");
-  var distance = 100;
+  var user = new Racer(Number(userSpeed), Number(userFocus), userName);
+  var rabbit = new Racer(8,3,"Peter Rabbit");
+  var distance = 75;
   var winner;
   var message;
 
@@ -41,7 +41,14 @@ $('#runbutton').on('click', function() {
   console.log(rabbit.report());
   console.log(user.report());
 
-  $('#results span').text(message);
+  $('#results').text(message);
 
 });
 
+$('#bunnicula').click(function(){
+  if ($("#rabbitpic").attr("src", "images/rabbit.jpg")) {
+    $("#rabbitpic").removeAttr("src", "images/rabbit.jpg").attr("src", "images/rabbit2.jpg");
+  } else {
+    $("#rabbitpic").removeAttr("src", "images/rabbit2.jpg").attr("src", "images/rabbit.jpg");
+  }
+});
